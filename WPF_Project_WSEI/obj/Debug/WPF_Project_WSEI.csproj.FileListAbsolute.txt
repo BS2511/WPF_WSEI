@@ -22,3 +22,5 @@ C:\Users\bszos\source\repos\WPF_Project_WSEI\obj\Debug\WPF_Project_WSEI.csproj.G
 C:\Users\bszos\source\repos\WPF_Project_WSEI\obj\Debug\WPF_Project_WSEI.csproj.CopyComplete
 C:\Users\bszos\source\repos\WPF_Project_WSEI\obj\Debug\WPF_Project_WSEI.exe
 C:\Users\bszos\source\repos\WPF_Project_WSEI\obj\Debug\WPF_Project_WSEI.pdb
+C:\Users\bszos\source\repos\WPF_Project_WSEI\obj\Debug\EoTM_Certificate.g.cs
+C:\Users\bszos\source\repos\WPF_Project_WSEI\obj\Debug\EoTM_Certificate.baml

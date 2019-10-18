@@ -39,6 +39,7 @@
                     </ResourceDictionary.MergedDictionaries>
 
                     <!-- Accent color (and the associated forecolor) -->
+                    
                     <SolidColorBrush x:Key="SecondaryAccentBrush" Color="{StaticResource Accent200}"/>
                     <SolidColorBrush x:Key="SecondaryAccentForegroundBrush" Color="{StaticResource Accent200Foreground}"/>
                 </ResourceDictionary>

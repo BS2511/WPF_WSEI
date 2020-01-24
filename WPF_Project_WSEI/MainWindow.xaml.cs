@@ -52,13 +52,14 @@ namespace WPF_Project_WSEI
             this.DragMove();
         }
 
+
         private void Templates_Click(object sender, RoutedEventArgs e)
         {
             Button btnSender = (Button)sender;
             switch(btnSender.Name)
             {
-                case "EoTM_Certificate":
-                    EoTM_Certificate templateWindowOne = new EoTM_Certificate();
+                case "ClientBill":
+                    ClientBill templateWindowOne = new ClientBill();
                     templateWindowOne.Show();
                     break;
                 default:
@@ -66,4 +67,5 @@ namespace WPF_Project_WSEI
             }
         }
     }
+
 }

@@ -18,7 +18,7 @@
             CaptionHeight="0"
             ResizeBorderThickness="5" />
     </WindowChrome.WindowChrome>
-    <!--#region Login animation-->
+    <!--#region Start animation-->
     <Window.Resources>
         <Storyboard x:Key="SignIn">
             <ObjectAnimationUsingKeyFrames Storyboard.TargetProperty="(UIElement.Visibility)" Storyboard.TargetName="LoginWindow" >
@@ -55,7 +55,7 @@
     </Window.Triggers>
     <!--#endregion-->
     <Grid>
-        <!-- Part responsible for validation of user's data-->
+        <!-- This part is responsible for changing from black background to app itself-->
         <Border x:Name="LoginWindow"
                 Background="Black"
                 Visibility="Visible">
@@ -64,6 +64,7 @@
                   MinWidth="200"
                   MinHeight="100"
                   Background="DarkGray">
+                
                 <Button x:Name="LoginButton"
                             Content="Start"
                             VerticalAlignment="Center"
@@ -147,16 +148,16 @@
                                 </Grid.ColumnDefinitions>
                                 <Grid.RowDefinitions>
                                     <RowDefinition Height="250" />
-                                  
+                                   
                                 </Grid.RowDefinitions>
                                 <!--Various templates for documents-->
-                                <Button x:Name="EoTM_Certificate" Grid.Column="0" Grid.Row="0" Margin="10" Click="Templates_Click">
+                                <Button x:Name="ClientBill" ToolTip="Bill for a client" Grid.Column="0" Grid.Row="0" Margin="10" Click="Templates_Click">
                                     <Button.BitmapEffect>
                                         <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
                                     </Button.BitmapEffect>
-                                    <Image Source="Assets/certificate.png" Stretch="Fill"/>
+                                    <Image Source="Assets/BillClient.png" Stretch="Fill"/>
                                 </Button>
-                                <Button Grid.Column="1" Grid.Row="0" Margin="10">
+                                <Button x:Name="Drugi" Grid.Column="1" Grid.Row="0" Margin="10" Click="Templates_Click">
                                     <Button.BitmapEffect>
                                         <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
                                     </Button.BitmapEffect>
@@ -171,6 +172,8 @@
                                         <DropShadowBitmapEffect Color="Black" Direction="320" Softness="1" ShadowDepth="10" Opacity="0.5" />
                                     </Button.BitmapEffect>
                                 </Button>
+
+                                
                             </Grid>
                             
                         </Grid>
@@ -179,65 +182,14 @@
                     
                     <!--#region Chat App-->
                     <TabItem Header="Chat">
-                        <Grid>
-                            <Grid.ColumnDefinitions>
-                                <ColumnDefinition Width="*"/>
-                                <ColumnDefinition Width="2*"/>
-                            </Grid.ColumnDefinitions>
-                            <StackPanel Grid.Column="0"
-                                        Background="Gray">
-                                <Grid Margin="10">
-                                    <TextBox Margin="10" Style="{StaticResource MaterialDesignFloatingHintTextBox}"
-                                         materialDesign:HintAssist.Hint="Search"
-                                             FontSize="20"/>
-                                    <Button Style="{StaticResource MaterialDesignFlatButton}"
-                                            Margin="10"
-                                            HorizontalAlignment="Right"
-                                            Background="{x:Null}"
-                                            BorderBrush="{x:Null}">
-                                        <materialDesign:PackIcon Kind="PlusCircle" Width="24" Height="24"/>
-                                    </Button>
-                                </Grid>
-                                <ListView>
-                                    <ListViewItem HorizontalAlignment="Stretch">
-                                        <Grid HorizontalAlignment="Center" Margin="5">
-                                            <Grid.ColumnDefinitions>
-                                                <ColumnDefinition Width="50"/>
-                                                <ColumnDefinition Width="150"/>
-                                                <ColumnDefinition Width="50*"/>
-                                            </Grid.ColumnDefinitions>
-
-                                            <Border Width="40" Height="40" CornerRadius="25" BorderBrush="White" BorderThickness="0.6">
-                                                <Border.Background>
-                                                    <SolidColorBrush Color="AliceBlue"/>
-                                                </Border.Background>
-                                            </Border>
-                                            <Border Width="10" Height="10" 
-                                                    VerticalAlignment="Bottom" 
-                                                    Margin="5" 
-                                                    HorizontalAlignment="Right" 
-                                                    CornerRadius="15" 
-                                                    Background="LightGreen"/>
-                                            
-                                            <TextBlock Grid.Column="1" 
-                                                       Text="sasdas sdasda" 
-                                                       Margin="10 0"/>
-                                                
-                                            
-
-                                            <Border Grid.Column="2" Width="20" Height="20" CornerRadius="15" Background="White" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5">
-                                                <TextBlock FontSize="11" Text="2" Foreground="{StaticResource PrimaryHueDarkBrush}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-                                            </Border>
-                                        </Grid>
-                                    </ListViewItem>
-                                </ListView>
-                            </StackPanel>
-                        </Grid>
+                        
                     </TabItem>
                     <!--#endregion-->
                     
                     <!--#region Third App-->
-                    <TabItem Header="3"></TabItem>
+                    <TabItem Header="3">
+                        
+                    </TabItem>
                     <!--#endregion-->
                     
                 </dragablz:TabablzControl>
